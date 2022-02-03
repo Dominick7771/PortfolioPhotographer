@@ -1,0 +1,847 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    background-color: #000;
+}
+
+@font-face {
+    font-family:Inter;
+    src:url(assets/fonts/Inter-Bold.ttf);
+    font-weight:700;
+}
+
+.container {
+    max-width:1440px;
+    margin:0 auto;
+}
+
+.content {
+    display:flex;
+    height:90px;
+}
+
+.nav,.selector {
+    height:50px;
+    font-size:20px;
+    line-height:50px;
+}
+
+.nav-list {
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.logoDark {
+    width:50px;
+    height:50px;
+    fill:#fff;
+    transition:1s;
+    cursor:pointer;
+}
+
+.logoLight {
+    width:50px;
+    height:50px;
+    fill:#000;
+    transition:1s;
+    cursor:pointer;
+}
+
+.nav-list li {
+    padding-right:10px;
+    list-style-type:none;
+    color:#fff;
+}
+
+.dark-theme {
+    color:#fff;
+    text-decoration:none;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    transition:1s;
+}
+
+.light-theme {
+    color:#000;
+    text-decoration:none;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    transition:1s;
+}
+
+.content .selector {
+    margin-left:2%;
+}
+
+.nav {
+    flex-grow:1;
+}
+
+.themeDark {
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    margin: 0 30px 0 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.themeLight {
+    width: 50px;
+    height: 50px;
+    fill: #000;
+    margin: 0 30px 0 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.themeDark:hover,
+.themeLight:hover {
+    fill: #BDAE82;
+}
+
+.header .content {
+    background-image:url(./assets/img/bg.jpg);
+    background-repeat:no-repeat;
+    background-position:center 0;
+    align-items:center;
+    padding:0 2%;
+}
+
+.menu_nav {
+    height:1000px;
+    width:80%;
+    margin-left:auto;
+    position:absolute;
+    top:0;
+    left:20%;
+    background-color:#000;
+}
+
+.close_menu {
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:20px;
+    right:48px;
+    cursor:pointer;
+}
+
+.close_menu:hover {
+    fill:#BDAE82;
+}
+
+.menu_nav ul {
+    padding:15% 50% 45% 15%;
+}
+
+.menu_nav ul li a {
+    text-decoration: none;
+    color:#fff;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:35px;
+    line-height:73px;
+    cursor:pointer;
+    transition:1s;
+}
+
+.hero {
+    background-image:url(./assets/img/bg.jpg);
+    background-position:center -90px;
+    background-repeat:no-repeat;
+    padding:11.4% 59.7% 18.3% 5.5%;
+}
+
+.heroDarkThemeTitle {
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:60px;
+    line-height:120px;
+    color:#FFF;
+}
+
+.heroDarkThemeText {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    line-height:40px;
+    color:#FFF;
+    margin-bottom:25px;
+}
+
+.heroLightThemeTitle {
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:60px;
+    line-height:120px;
+    color:#000;
+}
+
+.heroLightThemeText {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    line-height:40px;
+    color:#000;
+    margin-bottom:25px;
+}
+
+.heroDarkThemeBtn {
+    width:220px;
+    height:55px;
+    background-color:#bdae82;
+    font-size:1.3em;
+    border:0;
+    cursor:pointer;
+    font-family:inherit;
+    transition:1s;
+}
+
+.heroLightThemeBtn {
+    width:220px;
+    height:55px;
+    background-color:#fff;
+    font-size:1.3em;
+    border:0;
+    cursor:pointer;
+    font-family:inherit;
+    transition:1s;
+}
+
+.skillsItemsDark div h2 {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:700;
+    font-size:20px;
+    line-height:40px;
+    color:#fff;
+    text-align:center;
+    margin:50px 0 20px;
+}
+
+.skillsItemsDark div h3 {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:18px;
+    line-height:36px;
+    color:#fff;
+    text-align:center;
+    padding:0 10%;
+}
+
+.skillsItemsLight div h2 {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:700;
+    font-size:20px;
+    line-height:40px;
+    color:#000;
+    text-align:center;
+    margin:50px 0 20px;
+}
+
+.skillsItemsLight div h3 {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:18px;
+    line-height:36px;
+    color:#000;
+    text-align:center;
+    padding:0 10%;
+}
+
+.camera {
+    display:block;
+    width:62px;
+    height:50px;
+    margin:auto;
+}
+
+.video {
+    display:block;
+    width:60px;
+    height:50px;
+    margin:auto;
+}
+
+.image {
+    display:block;
+    width:66px;
+    height:50px;
+    margin:auto;
+}
+
+.mic {
+    display:block;
+    width:32px;
+    height:50px;
+    margin:auto;
+}
+
+.albumBtnDark button {
+    width:220px;
+    height:55px;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    line-height:40px;
+    text-align:center;
+    color:#BDAE82;
+    border:2px solid #bdae82;
+    background-color:#000;
+    cursor:pointer;
+    transition:1s;
+}
+
+.albumBtnDark .active {
+    color:#000!important;
+    background-color:#bdae82;
+    transition:1s;
+}
+
+.albumBtnLight button {
+    width:220px;
+    height:55px;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    line-height:40px;
+    text-align:center;
+    color:#000;
+    border:2px solid #bdae82;
+    background-color:#BDAE82;
+    cursor:pointer;
+    transition:1s;
+}
+
+.albumBtnLight .active {
+    color:#BDAE82!important;
+    background-color:#000;
+    transition:1s;
+}
+
+.active {
+    color:#BDAE82!important;
+    transition:1s;
+}
+
+.selectorLanguage .active {
+    color:#000;
+    background-color:#bdae82;
+    transition:1s;
+}
+
+.portfolioPhoto {
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.video-player img {
+    width:98%;
+}
+
+.video-player {
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.play_hover {
+    background-color:transparent;
+    border:none;
+    position:absolute;
+}
+
+.play_hover2 {
+    width:130px;
+    height:130px;
+    cursor:pointer;
+    fill:#fff;
+    transition:1s;
+}
+
+.priceCartDark div h2 {
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:28px;
+    line-height:56px;
+    text-align:center;
+    color:#FFF;
+    padding-bottom:20px;
+}
+
+.priceCartDark div h3 {
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:24px;
+    line-height:48px;
+    text-align:center;
+    color:#BDAE82;
+    padding-bottom:20px;
+}
+
+.priceCartDark div span {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:18px;
+    line-height:36px;
+    color:#FFF;
+    display:block;
+    text-align:center;
+}
+
+.priceCartLight div h2 {
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:28px;
+    line-height:56px;
+    text-align:center;
+    color:#000;
+    padding-bottom:20px;
+}
+
+.priceCartLight div h3 {
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:24px;
+    line-height:48px;
+    text-align:center;
+    color:#000;
+    padding-bottom:20px;
+}
+
+.priceCartLight div span {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:18px;
+    line-height:36px;
+    color:#000;
+    display:block;
+    text-align:center;
+}
+
+.contacts {
+    background-image:url(./assets/img/contacts.jpg);
+    padding:60px 20px 80px 0;
+}
+
+.formDark h2 {
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:40px;
+    line-height:80px;
+    color:#bdae82;
+    margin-bottom:40px;
+}
+
+.formDark input,.formDark textarea {
+    background:rgba(0,0,0,0.5);
+    border:2px solid #BDAE82;
+    margin-bottom:20px;
+    padding-left:20px;
+    transition:1s;
+    color:#fff;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+}
+
+.formDark button {
+    width:220px;
+    height:55px;
+    background-color:#bdae82;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    line-height:40px;
+    cursor:pointer;
+    transition:1s;
+}
+
+.formLight h2 {
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:40px;
+    line-height:80px;
+    color:#000;
+    margin-bottom:40px;
+}
+
+.formLight input,.formLight textarea {
+    background:rgba(255,255,255,0.5);
+    border:2px solid #BDAE82;
+    margin-bottom:20px;
+    padding-left:20px;
+    transition:1s;
+    color:#fff;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+}
+
+.formLight button {
+    width:220px;
+    height:55px;
+    background-color:#fff;
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    line-height:40px;
+    cursor:pointer;
+    transition:1s;
+}
+
+::placeholder {
+    font-family:inherit;
+    color:#bdae82;
+    font-size:20px;
+    line-height:40px;
+}
+
+.footerContentDark {
+    background-color:#000;
+    display:flex;
+    justify-content:space-between;
+    padding:0 10px;
+}
+
+.footerContentDark span {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    line-height:50px;
+    color:#FFF;
+    font-size:20px;
+}
+
+.footerContentLight {
+    background-color:#fff;
+    display:flex;
+    justify-content:space-between;
+    padding:0 10px;
+}
+
+.footerContentLight span {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    line-height:50px;
+    color:#000;
+    font-size:20px;
+}
+
+.footerIconsDark {
+    width:32px;
+    height:32px;
+    cursor:pointer;
+    fill:#fff;
+    transition:1s;
+}
+
+.footerIconsLight {
+    width:32px;
+    height:32px;
+    cursor:pointer;
+    fill:#000;
+    transition:1s;
+}
+
+.left,.middle,.right {
+    line-height:150px;
+}
+
+.githubDark a {
+    transition:1s;
+    text-decoration:none;
+    color:#fff;
+}
+
+.githubLight a {
+    transition:1s;
+    text-decoration:none;
+    color:#000;
+}
+
+.albumBtnLight button:hover {
+    color:#BDAE82;
+    background-color:#000;
+}
+
+.left span,.right svg {
+    margin:0 10px;
+}
+
+.menu,.hidden {
+    display:none;
+}
+
+.light-theme:hover {
+    color:#FFF;
+}
+
+.sectionDark {
+    background-color:#000;
+    padding-top:100px;
+}
+
+.sectionLight {
+    background-color:#fff;
+    padding-top:100px;
+}
+
+.skillLabelsDark,.portfolioLabelsDark,.videoLabelsDark,.priceLabelsDark {
+    width:50%;
+    background-image:linear-gradient(to top,#000 39px,#bdae82 39px,#bdae82 41px,#000 41px);
+    margin:auto auto 60px;
+    padding:0 15%;
+}
+
+.skillLabelsLight,.portfolioLabelsLight,.videoLabelsLight,.priceLabelsLight {
+    width:50%;
+    background-image:linear-gradient(to top,#fff 39px,#000 39px,#000 41px,#fff 41px);
+    margin:auto auto 60px;
+    padding:0 15%;
+}
+
+.skillLabelsTextDark,.portfolioLabelsTextDark,.videoLabelsTextDark,.priceLabelsTextDark {
+    color:#bdae82;
+    text-align:center;
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:40px;
+    line-height:80px;
+    background-color:#000;
+}
+
+.skillLabelsTextLight,.portfolioLabelsTextLight,.videoLabelsTextLight,.priceLabelsTextLight {
+    color:#000;
+    text-align:center;
+    font-family:Merriweather;
+    font-style:normal;
+    font-weight:700;
+    font-size:40px;
+    line-height:80px;
+    background-color:#fff;
+}
+
+.skillsItemsDark,.skillsItemsLight {
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.skillsItemsDark div,.skillsItemsLight div {
+    width:25%;
+}
+
+.albumBtnDark,.albumBtnLight {
+    width:64%;
+    margin:auto auto 60px;
+}
+
+.priceCartDark,.priceCartLight {
+    display:flex;
+    padding-bottom:100px;
+}
+
+.priceCartDark div,.priceCartLight div {
+    width:450px;
+    border:2px solid #bdae82;
+    margin:0 20px;
+}
+
+.priceCartDark div button,.priceCartLight div button {
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    line-height:40px;
+    text-align:center;
+    color:#000;
+    background-color:#bdae82;
+    width:220px;
+    display:block;
+    cursor:pointer;
+    transition:1s;
+    margin:40px auto 43px;
+}
+
+.formDark,.formLight {
+    display:flex;
+    flex-direction:column;
+    width:450px;
+    margin-left:auto;
+}
+
+.formDark input:hover,.formDark textarea:hover,.formLight input:hover,.formDark textarea:hover {
+    border:2px solid #fff;
+}
+
+.formDark input,.formLight input {
+    height:50px;
+}
+
+.logoDark:hover,.play_hover2:hover,.footerIconsDark:hover,.logoLight:hover,.footerIconsLight:hover {
+    fill:#bdae82;
+}
+
+.albumBtnDark button:hover,.albumBtnDark button:last-child:hover,.priceCartDark div button:hover,.formDark button:hover,.heroDarkThemeBtn:hover {
+    color:#fff;
+}
+
+.heroLightThemeBtn:hover,.priceCartLight div button:hover,.formLight button:hover {
+    background-color:#000;
+    color:#BDAE82;
+}
+
+.menu_nav ul li a:hover,.dark-theme:hover,.githubDark a:hover,.githubLight a:hover {
+    color:#bdae82;
+}
+
+@media (max-width: 768px){
+    .nav {
+        display:none;
+    }
+
+    .menu {
+        display:block;
+        cursor:pointer;
+        width:50px;
+        transition:1s;
+        fill:#FFF;
+    }
+
+    .menu:hover {
+        fill:#BDAE82;
+    }
+
+    .header .content {
+        padding:0 7%;
+    }
+
+    .content .selector {
+        margin-left:30%;
+    }
+
+    .hero {
+        padding:21.8% 41.4% 19.7% 7.8%;
+    }
+
+    .content {
+        justify-content:space-between;
+    }
+
+    .portfolioPhoto {
+        justify-content:center;
+    }
+
+    .contacts {
+        background-image:url(./assets/img/contacts_768.jpg);
+        padding:0;
+    }
+
+    .skillsItemsDark div,.skillsItemsLight div {
+        width:46%;
+        margin:2%;
+    }
+
+    .albumBtnDark,.albumBtnLight {
+        width:444px;
+    }
+
+    .priceCartDark,.priceCartLight {
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .priceCartDark div,.priceCartLight div {
+        margin:0 20px 50px;
+    }
+
+    .formDark,.formLight {
+        padding-bottom:110px;
+        margin:auto;
+    }
+
+    .formDark h2,.formLight h2 {
+        margin:0 auto 40px;
+    }
+
+    .formDark button,.formLight button {
+        margin:auto;
+    }
+
+    .footerContentDark,.footerContentLight {
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .footerContentDark div,.footerContentLight div {
+        line-height:40px;
+    }
+
+    .footerContentDark div:last-child,.footerContentLight div:last-child {
+        margin-bottom:28px;
+    }
+}
+
+@media (max-width: 500px){
+    .skillsItemsDark div,.skillsItemsLight div {
+        width:100%;
+        margin-bottom:50px;
+    }
+
+    .skillLabelsDark,.skillLabelsLight {
+        padding:0 10%;
+    }
+
+    .portfolio .skillLabelsDark,.portfolio .skillLabelsLight {
+        padding:0 2%;
+    }
+
+    .albumBtnDark,.albumBtnLight {
+        width:230px;
+    }
+
+    .portfolioPhoto img,.formDark,.portfolioPhoto img,.formLight {
+        width:100%;
+    }
+}
