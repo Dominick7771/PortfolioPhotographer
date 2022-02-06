@@ -415,6 +415,14 @@ body {
     margin: 0 10px;
 }
 
+.video-hud__element_after {
+    cursor:pointer;
+    display:inline-block;
+    vertical-align:middle;
+    color: #FFFFFF;
+    margin: 0 10px;
+}
+
 .range__video {
     -webkit-appearance: none;
     border: 1px solid black;
