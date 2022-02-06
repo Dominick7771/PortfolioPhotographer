@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="shortcut icon" href="assets/svg/favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/28b252ef76.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="translate.js" defer></script>
     <script src="selector-theme.js" defer></script>
+    <script src="video.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -112,14 +114,24 @@
                 </div>
                 <div class="portfolioPhoto"></div>
             </section>
-            <section class="videos sectionDark" id="video">
+            <section class="videos sectionDark">
                 <div class="videoLabelsDark">
                     <h2 data-i18="video" class="videoLabelsTextDark">Video</h2>
                 </div>
                 <div class="video-player">
-                    <img src="./assets/img/video-player.jpg" alt="video-player">
+                    <div>
+                        <video src="./assets/video/video.mp4" class='video-player' id='videoPlayer' preload='metadata'></video>
+                        <div class='video-hud'>
+                            <button class="play fas fa-play" id='video-hud__action'></button>
+                            <div class='video-hud__element' id='video-hud__curr-time'>00:00</div>
+                            <input type='range' value='0' max='100' class='video-hud__element range__video' id='video-hud__progress-bar' oninput="range()">
+                            <div class='video-hud__element' id='video-hud__duration'>00:00</div>
+                            <button class="sound fas fa-volume-up" id='video-hud__mute'></button>
+                            <input type='range' value='50' max='100' title='Громкость' class='video-hud__element range__audio' id='video-hud__volume' oninput="rangeVolume()">
+                        </div>
+                    </div>
                     <button class="play_hover">
-                        <svg class="play_hover2">
+                        <svg class="play_hover2" id="play">
                             <use href="./assets/svg/sprite.svg#Play_hover"></use>
                         </svg>
                     </button>
